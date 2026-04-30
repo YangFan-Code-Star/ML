@@ -1,0 +1,77 @@
+FROM docker.m.daocloud.io/pytorch/pytorch:2.7.0-cuda12.8-cudnn9-devel
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
+ENV NVIDIA_DISABLE_REQUIRE=1
+ENV OPENCV_IO_ENABLE_OPENEXR=1
+ENV TORCH_CUDA_ARCH_LIST="12.0"
+ENV FORCE_CUDA=1
+ENV MAX_JOBS=4
+ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ENV PIP_TRUSTED_HOST=pypi.tuna.tsinghua.edu.cn
+
+SHELL ["/bin/bash", "-lc"]
+
+RUN sed -i \
+      -e 's|http://archive.ubuntu.com/ubuntu|http://mirrors.aliyun.com/ubuntu|g' \
+      -e 's|http://security.ubuntu.com/ubuntu|http://mirrors.aliyun.com/ubuntu|g' \
+      /etc/apt/sources.list && \
+    apt-get -o Acquire::Retries=5 update --fix-missing && \
+    apt-get -o Acquire::Retries=5 install -y --no-install-recommends \
+      build-essential \
+      ca-certificates \
+      cmake \
+      curl \
+      git \
+      libboost-program-options-dev \
+      libboost-system-dev \
+      libeigen3-dev \
+      libgl1 \
+      libglib2.0-0 \
+      libgomp1 \
+      libsm6 \
+      libxext6 \
+      libxrender1 \
+      ninja-build \
+      pkg-config \
+      wget && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN python -m pip install --upgrade pip setuptools wheel && \
+    python -m pip install \
+      numpy==1.26.4 \
+      scipy \
+      scikit-learn \
+      scikit-image \
+      pyyaml \
+      ruamel.yaml \
+      h5py \
+      imageio \
+      opencv-python-headless \
+      opencv-contrib-python-headless \
+      open3d \
+      trimesh \
+      transformations \
+      joblib \
+      psutil \
+      pandas \
+      matplotlib \
+      pillow \
+      kornia \
+      omegaconf \
+      tqdm \
+      pybind11[global] \
+      fvcore \
+      iopath \
+      warp-lang \
+      pyrender \
+      pyglet \
+      xatlas \
+      rtree
+
+RUN python -m pip install --no-build-isolation "git+https://github.com/NVlabs/nvdiffrast.git" && \
+    python -m pip install --no-build-isolation "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+
+WORKDIR /workspace/FoundationPose
+
+CMD ["/bin/bash"]

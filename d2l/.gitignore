@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local environment and tool caches
+.mplconfig/
+.ipynb_checkpoints/
+
+# Generated outputs
+code/outputs/
+
+# Local datasets and downloaded assets
+data/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

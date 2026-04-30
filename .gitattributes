@@ -1,0 +1,2 @@
+FoundationPose-main/demo_data/*.zip filter=lfs diff=lfs merge=lfs -text
+FoundationPose-main/weights/**/*.pth filter=lfs diff=lfs merge=lfs -text

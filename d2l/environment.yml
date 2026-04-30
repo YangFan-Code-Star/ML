@@ -1,0 +1,14 @@
+name: d2l-lighting-mlp
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch
+  - cpuonly
+  - matplotlib
+  - pandas
+  - numpy
+  - pip
+  - pip:
+      - d2l
