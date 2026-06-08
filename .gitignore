@@ -12,6 +12,9 @@ ENV/
 # Notebook and local checkpoints
 .ipynb_checkpoints/
 
+# Local datasets and generated data
+d2l/dataset/
+
 # Build and packaging outputs
 build/
 dist/
