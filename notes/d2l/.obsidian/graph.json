@@ -1,0 +1,86 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#fam/基础",
+      "color": {
+        "a": 1,
+        "rgb": 6000633
+      }
+    },
+    {
+      "query": "tag:#fam/计算",
+      "color": {
+        "a": 1,
+        "rgb": 6413738
+      }
+    },
+    {
+      "query": "tag:#fam/CNN",
+      "color": {
+        "a": 1,
+        "rgb": 16170262
+      }
+    },
+    {
+      "query": "tag:#fam/RNN",
+      "color": {
+        "a": 1,
+        "rgb": 7496445
+      }
+    },
+    {
+      "query": "tag:#fam/注意力",
+      "color": {
+        "a": 1,
+        "rgb": 16739179
+      }
+    },
+    {
+      "query": "tag:#fam/优化",
+      "color": {
+        "a": 1,
+        "rgb": 2004115
+      }
+    },
+    {
+      "query": "tag:#fam/CV",
+      "color": {
+        "a": 1,
+        "rgb": 9597130
+      }
+    },
+    {
+      "query": "tag:#fam/NLP",
+      "color": {
+        "a": 1,
+        "rgb": 16751949
+      }
+    },
+    {
+      "query": "tag:#fam/导航",
+      "color": {
+        "a": 1,
+        "rgb": 12303291
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": -0.1,
+  "nodeSizeMultiplier": 1.99048442906574,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.5,
+  "repelStrength": 10,
+  "linkStrength": 0.496539792387543,
+  "linkDistance": 249,
+  "scale": 0.7132754626224399,
+  "close": false
+}

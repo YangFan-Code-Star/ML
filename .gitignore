@@ -14,6 +14,19 @@ ENV/
 
 # Local datasets and generated data
 d2l/dataset/
+data/
+logs/
+
+# Third-party / nested repositories (not submodules)
+LLaMA-Factory/
+
+# Generated analysis outputs and submissions
+Net/output/
+Net/analysis/
+**/submission.csv
+
+# Obsidian volatile UI state
+notes/**/.obsidian/workspace.json
 
 # Build and packaging outputs
 build/

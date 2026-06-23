@@ -1,3 +1,6 @@
+from typing import Any
+
+
 import torch
 import torchvision
 from torch.utils import data
@@ -54,7 +57,7 @@ class Accumulator:
         self.data = [0.0] * n
 
     def add(self, *args):
-        self.data = [a + float(b) for a, b in zip(self.data, args)]
+        self.data = [a + float(b) for a, b in zip[tuple[float, Any]](self.data, args)]
 
     def reset(self):
         self.data = [0.0] * len(self.data)
